@@ -1,13 +1,16 @@
 import React from "react";
 
-import SlideView from "./SlideViews/Slideview";
-import Header from "../../Components/Header/Header";
 import "./Home.css";
+import SearchBar from "../../Components/SearchBar/SearchBar";
+import SlideView from "../../Components/SlideViews/Slideview";
 
 const Home = () => {
   return (
-    <div className="home">
-      <Header />
+    <div>
+      <div className="my-jumbotron">
+        <h1>Welcome</h1>
+        <SearchBar />
+      </div>
       <SlideView />
     </div>
   );

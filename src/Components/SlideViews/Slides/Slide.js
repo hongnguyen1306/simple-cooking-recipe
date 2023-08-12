@@ -19,12 +19,6 @@ const Slides = ({ alternate, shoes, off }) => {
             Exclusive <span className="slides__shoes">{shoes}</span> for{" "}
             <span className="slides__sale">Sale</span>
           </span>
-          <div className="slides__saleDiv">
-            <span className="slides__upto">Upto</span>
-            <span className="slides__off">
-              {off}% <span className="slides__upto">off</span>
-            </span>
-          </div>
           {/* <Link to={pathTo}> */}
           <Link to={"/cookingdetail"}>
             <button className="slides__button">Explore More</button>

@@ -1,0 +1,27 @@
+.slideView__wrapper {
+    max-width: 50%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* background-color: red; */
+  }
+  
+  .slideView__page {
+    max-width: 100%;
+    color: black;
+    background: linear-gradient(to right, rgb(230, 199, 164), rgb(238, 181, 96));
+    border-radius: 100px;
+  }
+
+  .slider-arrow {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+  color: rgb(153, 131, 85);
+}

@@ -15,7 +15,7 @@
     border-radius: 5px 0 0 5px;
     outline: none;
     color: #9dbfaf;
-    width: 40%;
+    width: 400px;
 }
 
 .searchTerm:focus {
@@ -37,8 +37,10 @@
 
 /*Resize the wrap to see the search bar change!*/
 .wrap {
-    width: 30%;
+    width: 100%;
     margin: 20px auto;
+    justify-content : center;
+    display: flex;
     
     /* change the margin to move where it is on the page */
 }
