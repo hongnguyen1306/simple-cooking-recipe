@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-
 .prodcontainer {
   background-color: white;
   font-family: "Josefin Sans", sans-serif;
@@ -8,7 +6,6 @@
   margin-top: 30px;
 }
 .prodimg {
-  /* border: 2px solid red; */
   margin-left: 30px;
 }
 .prodimg img {
@@ -19,13 +16,9 @@
   object-fit: contain;
 }
 .proddetails {
-  /* border: 2px solid yellow; */
   margin-right: 30px;
   margin-left: 20px;
 }
-/* .prodin {
-  border: 2px solid orange;
-} */
 .prodtitle,
 .proddesc,
 .prodprice {

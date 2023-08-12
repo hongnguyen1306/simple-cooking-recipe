@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./SearchBar.css";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -12,9 +13,11 @@ const SearchBar = () => (
         className="searchTerm"
         id="input_text"
       ></input>
-      <button type="submit" className="searchButton">
-        <SearchIcon />
-      </button>
+      <Link style={{ textDecoration: "none" }} to="/results">
+        <button type="submit" className="searchButton">
+          <SearchIcon />
+        </button>
+      </Link>
     </div>
   </div>
 );
