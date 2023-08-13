@@ -3,25 +3,20 @@ import { Link } from "react-router-dom";
 
 import "./Slide.css";
 
-// import LoyaltyIcon from "@material-ui/icons/Loyalty";
-
-const Slides = ({ alternate, shoes, off }) => {
+const Slides = ({ image, alternate, name, id }) => {
   return (
     <>
       <div className="slides__clearance">
-        <span className="slides__clearanceSale">Clearance Sale</span>
-        {/* <LoyaltyIcon className="slides__icon" /> */}
+        <span className="slides__clearanceSale">{name}</span>
       </div>
       <div className="slides">
-        <img className="slides__img" src="pho.jpg" alt={alternate} />
+        <img className="slides__img" src={image} alt={alternate} />
         <div className="slides__right">
           <span className="slides__tag">
-            Exclusive <span className="slides__shoes">{shoes}</span> for{" "}
-            <span className="slides__sale">Sale</span>
+            <span className="slides__shoes">{name}</span>
           </span>
-          {/* <Link to={pathTo}> */}
-          <Link to={"/cookingdetail"}>
-            <button className="slides__button">Explore More</button>
+          <Link to={"/cookingdetail?recipe=" + id}>
+            <button className="slides__button">Detail</button>
           </Link>
         </div>
       </div>

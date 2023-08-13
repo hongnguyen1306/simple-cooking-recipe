@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import "./SlideView.css";
-import Slider from "react-slick";
 import Slides from "./Slides/Slide";
 
 const SlideView = () => {
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/recipes")
+      .then((response) => {
+        setRecipes(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   return (
     <div className="slideView__wrapper">
       <Slider
@@ -18,33 +32,16 @@ const SlideView = () => {
         infinite={true}
         dots={true}
       >
-        <div className="slideView__page">
-          <Slides
-            image="123"
-            alternate="Air Jordan"
-            shoes="Air Jordan Retros"
-            off={40}
-            pathTo="/cookingdetail"
-          />
-        </div>
-        <div className="slideView__page">
-          <Slides
-            image="123"
-            alternate="Nike Blazers"
-            shoes="NIKE Blazers"
-            off={25}
-            pathTo="/cookingdetail"
-          />
-        </div>
-        <div className="slideView__page">
-          <Slides
-            image="123"
-            alternate="Nike Air Max"
-            shoes="NIKE Air Max"
-            off={20}
-            pathTo="/cookingdetail"
-          />
-        </div>
+        {recipes.map((recipe) => (
+          <div className="slideView__page" key={recipe.id}>
+            <Slides
+              image={recipe.img}
+              alternate={recipe.name}
+              name={recipe.name}
+              id={recipe.id}
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );

@@ -1,10 +1,24 @@
-  
+.item {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.item_name {
+  left: 0;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  height: 50px;
+  z-index: 0; /* Đặt z-index cho phần tên công thức */
+}
+
+
   .category {
     display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
     justify-content: space-between;
-    /* height: 646px; */
     border: 2px solid #fff;
   }
   .category div {
@@ -16,8 +30,6 @@
     justify-content: flex-end;
     align-items: flex-end;
     transition: all 0.4s ease-in-out;
-    /* background-repeat: no-repeat;
-    background-position: center; */
   }
   @media (max-width: 900px) {
     .category div {
@@ -43,7 +55,12 @@
     font-size: 16px;
     opacity: 1;
     transition: background-color 0.4s ease-in-out;
+    position: absolute;
+    left: 87%;
+    transform: translateX(-50%); /* Dịch chuyển nút lên trên theo chiều ngang */
+    z-index: 2; /* Đặt z-index cao hơn để nút hiển thị trên cả phần tên công thức và item */
   }
+  
   .category div .btn:hover {
     background-color: white;
     color: black;
