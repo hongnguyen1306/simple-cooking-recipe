@@ -44,24 +44,16 @@
   .category div:hover {
     transform: scale(1.05);
   }
-  .category div .btn {
-    cursor: pointer;
-    border: 2px solid blue;
-    height: 38px;
-    width: 124px;
-    background: #fff;
-    color: black;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 16px;
-    opacity: 1;
-    transition: background-color 0.4s ease-in-out;
-    position: absolute;
-    left: 87%;
-    transform: translateX(-50%); /* Dịch chuyển nút lên trên theo chiều ngang */
-    z-index: 2; /* Đặt z-index cao hơn để nút hiển thị trên cả phần tên công thức và item */
-  }
-  
+
   .category div .btn:hover {
     background-color: white;
     color: black;
+  }
+
+  .item_name{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
   }

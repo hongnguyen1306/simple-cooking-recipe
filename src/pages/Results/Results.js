@@ -1,28 +1,30 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-
+import { Link, useLocation } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import "./Results.css";
-import { Link, useLocation } from "react-router-dom";
-import axios from "axios";
 
 const Results = () => {
-  const location = useLocation();
-  const searchQuery = new URLSearchParams(location.search).get("search");
-  console.log("searchQuery ", searchQuery);
   const [recipes, setRecipes] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const selectedOption = searchParams.get("cuisine")
+      ? "cuisine"
+      : "ingredient";
+    const searchTerm = searchParams.get(selectedOption);
+
     axios
-      .get(
-        `http://localhost:5000/api/recipesIngredients/ingredient/${searchQuery}`
-      )
+      .get(`http://localhost:5000/api/recipes/${selectedOption}/${searchTerm}`)
       .then((response) => {
+        console.log(response.data);
         setRecipes(response.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []);
+  }, [location.search]);
 
   return (
     <div>
@@ -36,10 +38,11 @@ const Results = () => {
             style={{ backgroundImage: `url("${recipe.img}")` }}
           >
             <Link
+              className="item_name"
               to={"/cookingdetail?recipe=" + recipe.id}
               style={{ textDecoration: "none" }}
             >
-              <p className="item_name">{recipe.name}</p>
+              <p className="text_name">{recipe.name}</p>
             </Link>
           </div>
         ))}

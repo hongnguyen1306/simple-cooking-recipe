@@ -38,6 +38,7 @@ const SlideView = () => {
               image={recipe.img}
               alternate={recipe.name}
               name={recipe.name}
+              cuisine={recipe.cuisine_name}
               id={recipe.id}
             />
           </div>

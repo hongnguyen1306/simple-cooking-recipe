@@ -18,6 +18,22 @@
     width: 400px;
 }
 
+/* Áp dụng kiểu dáng cho các option trong dropdown */
+.searchOption option {
+    font-size: 14px; 
+    padding: 10px;
+  }
+  
+  .searchOption {
+    border: 3px solid #00b4cc;
+    border-right: none;
+    padding: 5px;
+    height: 41px;
+    font-size: 14px;
+  }
+  
+
+
 .searchTerm:focus {
     color: #00b4cc;
 }
