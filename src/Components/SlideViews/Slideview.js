@@ -13,7 +13,7 @@ const SlideView = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/recipes")
+      .get(`${process.env.REACT_APP_BACKEND_URL}api/recipes`)
       .then((response) => {
         setRecipes(response.data);
       })

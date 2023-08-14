@@ -16,7 +16,9 @@ const Results = () => {
     const searchTerm = searchParams.get(selectedOption);
 
     axios
-      .get(`http://localhost:5000/api/recipes/${selectedOption}/${searchTerm}`)
+      .get(
+        `${process.env.REACT_APP_BACKEND_URL}api/recipes/${selectedOption}/${searchTerm}`
+      )
       .then((response) => {
         console.log(response.data);
         setRecipes(response.data);

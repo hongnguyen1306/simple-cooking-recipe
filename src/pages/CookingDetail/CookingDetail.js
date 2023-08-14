@@ -14,7 +14,7 @@ const CookingDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/recipes/${searchQuery}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}api/recipes/${searchQuery}`)
       .then((response) => {
         const jsonDescription = JSON.parse(response.data.description);
         response.data.description = jsonDescription;
