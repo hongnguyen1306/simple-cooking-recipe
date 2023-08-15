@@ -10,8 +10,8 @@
   .slideView__page {
     max-width: 100%;
     color: black;
-    background: linear-gradient(to right, rgb(230, 199, 164), rgb(238, 181, 96));
-    border-radius: 100px;
+    border: 2px solid #F2F2F2;
+    border-radius: 8px;
   }
 
   .slider-arrow {

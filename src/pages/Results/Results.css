@@ -12,13 +12,13 @@
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   height: 50px;
-  z-index: 0; /* Đặt z-index cho phần tên công thức */
+  z-index: 0;
 }
 
 
   .category {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     border: 2px solid #fff;
   }
   .category div {

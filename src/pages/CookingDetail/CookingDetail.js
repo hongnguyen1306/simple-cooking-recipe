@@ -35,6 +35,7 @@ const CookingDetail = () => {
           <img className="cover" src={recipe.img} alt={recipe.img} />
           <div className="prodtitle">
             <h1>{recipe.name}</h1>
+            <h2>{recipe.cuisine_name}</h2>
           </div>
         </div>
         <div className="proddetails">

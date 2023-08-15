@@ -1,31 +1,10 @@
-.slides__clearance {
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    text-align: center;
-    padding: 10px 20px;
-    background: linear-gradient(to left, black, darkslategray);
-    box-shadow: 0 2px 2px gray;
-    text-shadow: 0 0 2px rgb(18, 12, 93);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    display: flex;
+.slides__clearanceSale {
+    font-size: 20px;
+    font-weight: 700;
     align-items: center;
     justify-content: center;
-  }
-  
-  .slides__clearanceSale {
-    font-size: 20px;
-    font-weight: 200;
-    padding-right: 15px;
-    color: rgb(255, 255, 255);
-  }
-  
-  .slides__icon {
-    color: rgb(236, 108, 108);
+		font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    color: brown;
   }
   
   .slides {
@@ -37,49 +16,48 @@
   }
   
   .slides__img {
-    width: 220px;
-    height: 200px;
-    /* object-fit: contain; */
-    /* border: 3px solid black; */
-    box-shadow: 5px 2px 10px rgb(63, 63, 63);
-    border-radius: 35%;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px rgb(97, 97, 97);
     margin-bottom: 10px;
     margin-left: 20px;
   }
   
   .slides__right {
-    margin-left: 80px;
-    margin-right: 60px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     max-width: 55%;
-
+    margin-left: 10%;
   }
 
   .slides__recipe {
-    color: red;
+    color: rgb(48, 43, 43);
     font-size: 25px;
     font-weight: 400;
+		font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
   }
   
   .slides__button {
+    margin-top: 15px;
     border: none;
     outline: none;
-    color: rgb(255, 255, 255);
-    background: linear-gradient(to right bottom, rgb(179, 0, 0), red);
-    font-size: 18px;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    background-color: #fc9400;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.5s ease;
-    margin-top: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.294);
   }
   
   .slides__button:hover {
-    background: rgb(233, 231, 231);
-    color: red;
-    border: 1px solid red;
+    background: rgb(255, 255, 255);
+    color: #fc9400;
+    border: 1px solid #fc9400;
   }
   

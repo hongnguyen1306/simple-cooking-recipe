@@ -7,7 +7,6 @@ const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOption, setSelectedOption] = useState("cuisine");
 
-  // Lấy hàm navigate từ hooks
   const navigate = useNavigate();
 
   const handleSearch = () => {
@@ -18,7 +17,7 @@ const SearchBar = () => {
     <div className="wrap">
       <div className="search">
         <input
-          placeholder="What are you looking for?"
+          placeholder="What are you looking for? e.g: European, egg, chicken, ..."
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
           type="text"
@@ -37,10 +36,10 @@ const SearchBar = () => {
             Ingredient
           </option>
         </select>
-        <button type="submit" className="searchButton" onClick={handleSearch}>
-          <SearchIcon />
-        </button>
       </div>
+      <button type="submit" className="searchButton" onClick={handleSearch}>
+        <SearchIcon />
+      </button>
     </div>
   );
 };
